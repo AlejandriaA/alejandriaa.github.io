@@ -385,7 +385,7 @@ console.log(`Edad promedio de la escuela : ${edadesEscuela/salones}`); */
 
 let x = +prompt("Ingrese el valor de x : ");
 let n = +prompt("Ingrese el valor de n : ");
-ex = 0;
+let ex = 0;
 for (let i = 0; i <= n; i++) {
     fact = 1;
     for (let j = i; j > 0; j--) {
@@ -479,4 +479,94 @@ for (let i = 1; i <= cantidad; i++) {
     console.log(`El cubo de ${numero} es ${numero*numero*numero}`);
 } */
 
-//Ejercicio 4.17 
+/* //Ejercicio 4.17 
+
+let n = +prompt("Ingrese un número : ");
+for (let i = 1; i <= 12; i++) {
+    console.log(`${n} x ${i} = ${n*i}`);
+}  */
+
+/* //Ejercicio 4.18
+
+monto = 1500;
+for (let i = 0; i < 59; i++) {
+    monto += monto*0.15;
+}
+console.log(`La inversión de 1500 en 1961 vale ahora ${monto}`); */
+
+/* //Ejercicio 4.19
+
+let total = 0;
+let total1 = 0;
+let total2 = 0;
+let total3 = 0;
+let autos = +prompt("Ingrese la cantidad de automóviles : ");
+for (let i = 1; i <= autos; i++) {
+    let valor = +prompt(`Ingrese el valor del automóvil #${i}: `);
+    let clave = +prompt(`Ingrese la clave del automóvil #${i}: `);
+    let impuesto = 0;
+        switch (clave) {
+            case 1:
+                impuesto = valor*0.10;
+                total1 += impuesto;
+                total += impuesto;
+                console.log(`Impuesto del auto #${i} : ${impuesto}`);
+                break;
+            case 2:
+                impuesto = valor*0.07;
+                total2 += impuesto;
+                total += impuesto;
+                console.log(`Impuesto del auto #${i} : ${impuesto}`);
+                break;
+            case 3:
+                impuesto = valor*0.05;
+                total3 += impuesto;
+                total += impuesto;
+                console.log(`Impuesto del auto #${i} : ${impuesto}`);
+                break;
+            default:
+                i--;
+        }
+}
+console.log(`Total de impuestos de vehículos clave 1 : ${total1}`);
+console.log(`Total de impuestos de vehículos clave 2 : ${total2}`);
+console.log(`Total de impuestos de vehículos clave 3 : ${total3}`);
+console.log(`Total de impuestos de vehículos : ${total}`); */
+
+/* //Ejercicio 4.20
+
+let x = +prompt("Ingrese el valor de x : ");
+let n = +prompt("Ingrese el valor de n : ");
+let sen = x;
+let sig = '-';
+for (let i = 3; i <= n; i+=2) {
+    fact = 1;
+    for (let j = i; j > 0; j--) {
+        fact *= j;
+    }
+    if (sig == '-') {
+        sen -= (Math.pow(x,i)/fact);
+        sig = '+';
+    } else {
+        sen += (Math.pow(x,i)/fact);
+        sig = '-';
+    }
+}
+console.log(`El seno de ${x} es : ${sen}`); */
+
+/* //Ejercicio 4.21
+
+let total = 0;
+let cantidad = +prompt("Ingrese la cantidad de billetes y monedas: ");
+for (let i = 1; i <= cantidad; i++) {
+    monto = +prompt(`Ingrese el valor del billete o moneda #${i}: `);
+        switch (monto) {
+            case 10: case 20: case 50: case 1: case 5:
+                total += monto;
+                break;
+            default:
+                i--;
+                break;
+        }
+}
+console.log(`La cantidad de dinero en el monedero es ${total}`); */
