@@ -1,0 +1,573 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css');
+
+:root {
+	--color-blue-dark: hsl(228, 39%, 23%);
+	--color-naranja: hsl(12, 88%, 59%);
+	--color-plomo-claro: hsl(0, 0%, 98%);
+	--color-rosado-claro: hsl(13, 100%, 96%);
+	--color-blure-very-dark: hsl(233, 12%, 13%);
+	--color-blue-gray: hsl(227, 12%, 61%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Be Vietnam', sans-serif;
+    margin: 0 auto;
+    background-image: url(../images/bg-tablet-pattern.svg), url(../images/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% + 10rem) -15rem, calc(100% - 65rem) +65rem;
+}
+
+.header__wrapper{
+    width: 1440px;
+    padding: 0 9rem;
+    margin: 0 auto;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    padding-top: 1rem;
+    display: flex;
+}
+
+.header__nav{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.header__links{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.header__link{
+    text-decoration: none;
+    color: var(--color-blue-dark);
+}
+
+.header__link:hover{
+    text-decoration: none;
+    color: var(--color-blue-gray);
+}
+
+.header__icon{
+    display: none;
+}
+
+.btn{
+    background-color: var(--color-naranja);
+	color: var(--color-plomo-claro);
+	padding: 0.6rem 1.8rem;
+	border-radius: 1.7rem;
+	border: none;
+    outline: none;
+	box-shadow: var(--color-naranja) 0px 3px 8px;
+	font-family: "Be Vietnam", sans-serif;
+	font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.btn:hover{
+    background-color: hsl(12, 92%, 72%);
+    cursor: pointer;
+}
+
+.main__wrapper{
+    width: 1440px;
+    padding: 0 9rem;
+    margin: 0 auto;
+}
+
+.banner{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+
+.banner__text{
+    min-width: 50%;
+}
+
+.banner__title{
+    font-size: 3.7rem;
+	line-height: 4.2rem;
+    color: var(--color-blue-dark);
+}
+
+.banner__info{
+    width: 22rem;
+    font-size: 1rem;
+	color: var(--color-blue-gray);
+	font-weight: 400;
+    padding: 1.7rem 0 3rem 0;
+    line-height: 1.7rem;
+}
+
+.banner__illustration{
+    min-width: 50%;
+}
+
+.information{
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.intro{
+    min-width: 50%;
+}
+
+.intro__title{
+    font-size: 2.6rem;
+	color: var(--color-blue-dark);
+    line-height: 2.7rem;
+    font-weight: 700;
+}
+
+.points{
+    min-width: 50%;
+}
+
+.intro__info{
+    width: 22rem;
+    font-size: 1rem;
+	color: var(--color-blue-gray);
+    font-weight: 400;
+    padding: 1.7rem 0 3rem 0;
+    line-height: 1.7rem;
+}
+
+.points__point{
+    display: flex;
+}
+
+.points_number{
+	background-color: var(--color-naranja);
+	color: var(--color-plomo-claro);
+	height: 2rem;
+	width: 3.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 2rem;
+    padding: 0;
+    line-height: 0rem;
+    margin-right: 1.5rem;
+    font-weight: 700;
+}
+
+.points hr{
+    display: none;
+}
+
+.points__text{
+    margin-bottom: 2rem;
+    width: 27.5rem;
+}
+
+.points__title{
+    color: var(--color-blue-dark);
+    margin: 0.4rem 0;
+}
+
+.points__info{
+    font-size: 1rem;
+	color: var(--color-blue-gray);
+    font-weight: 400;
+    line-height: 1.7rem;
+}
+
+.testimonials__wrapper{
+    margin: 0 auto;
+    text-align: center;
+    width: 1440px;
+}
+
+.testimonials__title{
+    color: var(--color-blue-dark);
+    font-size: 2.6rem;
+    text-align: center;
+    font-weight: 700;
+    margin: 4rem 0;
+}
+
+.testimonials__container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.testimonials__testimonial{
+    width: 31%;
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 0 2rem 2rem 2rem;
+}
+
+.testimonials__photo{
+    width: 4rem;
+    height: 4rem;
+	transform: translate(0, -50%);
+}
+
+.testimonials__name{
+    color: var(--color-blue-dark);
+    transform: translate(0, -50%);
+}
+
+.testimonials__text{
+    font-size: 1rem;
+	color: var(--color-blue-gray);
+    font-weight: 400;
+    line-height: 1.7rem;
+}
+
+.simplify{
+    background-color: var(--color-naranja);
+    background-image: url(../images/bg-simplify-section-desktop.svg);
+    background-position: calc(100% + 12rem) -10rem;
+    min-width: 1440px;
+    margin-top: 10rem;
+}
+
+.simplify__wrapper{
+    width: 1440px;
+    padding: 3rem 9rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-plomo-claro);
+}
+
+.simplify__title{
+    color: var(--color-plomo-claro);
+    font-size: 2.6rem;
+    line-height: 2.7rem;
+    font-weight: 700;
+    width: 45%;
+}
+
+.simplify__wrapper .btn{
+    background-color: var(--color-plomo-claro);
+    color: var(--color-naranja);
+}
+
+.simplify__wrapper .btn:hover{
+    color: hsl(12, 92%, 72%);
+}
+
+.footer{
+    background-color: var(--color-blure-very-dark);
+    min-width: 1440px;
+}
+
+.footer__wrapper{
+    width: 1440px;
+    padding: 3rem 9rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__logos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer__social{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__icon{
+    color: var(--color-plomo-claro);
+    font-size: 1.2rem;
+}
+
+.footer__icon:hover{
+    color: var(--color-naranja);
+}
+
+.footer__lists{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    margin: 0 8rem;
+}
+
+.footer__links{
+    list-style: none;
+    color: var(--color-plomo-claro);
+    font-size: 0.9rem;
+    line-height: 2.1rem;
+}
+
+.footer__link:hover{
+    color: var(--color-naranja);
+    cursor: pointer;
+}
+
+.footer__end{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.footer__form{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.footer__input{
+    background-color: var(--color-plomo-claro);
+	color: var(--color-blue-gray);
+	padding: 0.6rem 1.5rem;
+	border-radius: 1.7rem;
+	border: none;
+    outline: none;
+	font-family: "Be Vietnam", sans-serif;
+	font-size: 0.9rem;
+}
+
+.footer__form .btn{
+	padding: 0.6rem 1.3rem;
+	border-radius: 1.7rem;
+	box-shadow: var(--color-naranja) 0px 0px 0px;
+}
+
+.footer__copyright{
+    color: var(--color-blue-gray);
+    font-size: 0.8rem;
+    text-align: end;
+}
+
+@media screen and (max-width: 375px) {
+    .header__wrapper{
+        width: 375px;
+        padding: 0 2rem;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+
+    .header__wrapper .btn{
+        display: none;
+    }
+    
+    .header__logo {
+        padding-top: 1rem;
+        display: flex;
+    }
+    
+    .header__nav{
+        display: none;
+    }
+    
+    .header__icon{
+        display: flex;
+    }
+
+    .header__icon:hover{
+        cursor: pointer;
+    }
+
+    .main__wrapper{
+        width: 375px;
+        padding: 0 2rem;
+    }
+    
+    .banner{
+        flex-direction: column-reverse;
+        margin-top: 1rem;
+    }
+    
+    .banner__text{
+        min-width: 50%;
+        text-align: center;
+    }
+    
+    .banner__title{
+        font-size: 2.3rem;
+        line-height: 2.5rem;
+    }
+    
+    .banner__info{
+        padding: 0.8rem 0 1.8rem 0;
+        width: 100%;
+    }
+    
+    .banner__illustration img{
+        width: 20rem;
+    }
+    
+    .information{
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 6rem;
+    }
+    
+    .intro{
+        text-align: center;
+    }
+    
+    .intro__title{
+        font-size: 1.8rem;
+        line-height: 2rem;
+    }
+    
+    .intro__info{
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 1rem 0 1.5rem 0;
+    }
+    
+    .points_number{
+        height: 1.9rem;
+        width: 6rem;
+        border-radius: 2rem;
+        margin-right: 0.9rem;
+        font-size: 0.9rem;
+    }
+
+    .points__point{
+        position: relative;
+    }
+
+    .points hr{
+        display: block;
+        border: none;
+        width: 20.4rem;
+        height: 1.7rem;
+        background-color: hsl(13, 100%, 96%);
+        position: relative;
+        top: 1.8rem;
+        margin-left: 1rem;
+    }
+    
+    .points__title{
+        font-size: 0.9rem;
+        margin: 0.3rem 0 0.8rem 0;
+    }
+    
+    .points__info{
+        font-size: 0.9rem;
+        position: relative;
+        right: 4.2rem;
+        width: 128%;
+    }
+
+    .testimonials__wrapper{
+        width: 375px;
+        padding: 0 2rem;
+    }
+    
+    .testimonials__title{
+        font-size: 1.8rem;
+        margin: 2rem 0 5rem 0;
+    }
+    
+    .testimonials__container{
+        justify-content: center;
+    }
+
+    .hide{
+        display: none;
+    }
+    
+    .testimonials__testimonial{
+        width: 100%;
+    }
+    
+    .testimonials__name{
+        color: var(--color-blue-dark);
+        transform: translate(0, -50%);
+    }
+    
+    .testimonials__text{
+        font-size: 0.9rem;
+    }
+
+    .simplify{
+        min-width: 375px;
+        margin-top: 3rem;
+        background-image: url(../images/bg-simplify-section-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: 0%;
+    }
+    
+    .simplify__wrapper{
+        width: 375px;
+        padding: 5rem 4rem;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+    }
+    
+    .simplify__title{
+        width: 100%;
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .footer{
+        min-width: 375px;
+    }
+    
+    .footer__wrapper{
+        width: 375px;
+        padding: 3rem 1rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+    }
+    
+    .footer__logos{
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .footer__social{
+        display: flex;
+        gap: 2rem;
+    }
+    
+    .footer__lists{
+        margin: 1rem 1rem;
+    }
+    
+    .footer__end{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    
+    .footer__form{
+        justify-content: center;
+    }
+    
+    .footer__copyright{
+        text-align: center;
+        position: relative;
+        top: 18rem;
+    }
+}
