@@ -112,6 +112,7 @@ formPlatos.onsubmit = (e) => {
 
   formFieldset.classList.remove("errorFormulario");
   formPlatos.reset();
+  selectCategoria.innerHTML = "<option value='0'>-Seleccione Categoria-</option>";
 }
 
 inputNombre.focus();
