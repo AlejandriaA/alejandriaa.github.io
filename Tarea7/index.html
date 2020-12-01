@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos.css">
+  <title>Menu</title>
+</head>
+
+<body>
+
+  <form id="formPlatos">
+    <fieldset id="formFieldset">
+      <legend>CREAR PLATO</legend>
+      <p>
+        <label for="">Nombre del Plato : </label>
+        <input type="text" id="inputNombre" placeholder="Ejm: Cebiche">
+      </p>
+      <p>
+        <label for="">Precio : </label>
+        <input type="number" id="inputPrecio">
+      </p>
+      <p>
+        <label for="">Tipo : </label>
+        <select name="" id="selectTipo">
+          <option value="0">-Seleccione Tipo-</option>
+        </select>
+      </p>
+      <p>
+        <label for="">Categoría : </label>
+        <select name="" id="selectCategoria">
+          <option value="0">-Seleccione Categoría-</option>
+        </select>
+      </p>
+      <p>
+        <button type="submit">Registrar Plato</button>
+      </p>
+
+    </fieldset>
+  </form>
+
+  <section class="contenedor">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>NOMBRE</th>
+          <th>PRECIO</th>
+          <th>TIPO</th>
+          <th>CATEGORIA</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+        <tr>
+          <td colspan="5">NO HAY PLATOS REGISTRADOS</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <script src="./index.js"></script>
+
+</body>
+
+</html>
