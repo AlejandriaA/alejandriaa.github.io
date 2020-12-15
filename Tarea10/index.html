@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet"> 
+  <title>Productos</title>
+  <style>
+    body{
+      font-family: 'Karla', sans-serif;
+    }
+    .btnFlotante {
+      padding: 0;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body class="bg-light">
+
+  <div class="modal fade" id="crearProductoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Añadir producto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12">
+              <form id="formCrearProducto">
+                <div class="row mb-2">
+                  <div class="form-group col-md-6">
+                    <label for="">Nombre</label>
+                    <input type="text" class="form-control" placeholder="vestido" id="inputCrearNombre">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="">Precio</label>
+                    <input type="text" class="form-control" placeholder="71.99" id="inputCrearPrecio">
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="form-group col-md-6">
+                    <label for="">Imagen</label>
+                    <input type="text" class="form-control" placeholder="https://..." id="inputCrearImagen">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="">Stock</label>
+                    <input type="number" class="form-control" id="inputCrearStock">
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="form-group col-md-6">
+                    <label for="">Categoría</label>
+                    <select name="" id="selectCrearCategoria" class="form-control">
+                    </select>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="form-group col-md-12 d-flex justify-content-end">
+                    <button class="btn btn-dark" id="btnCrear">Añadir</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="editarProductoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Editar producto</h5>
+          <button type="button" class="btn-close" id="closeModal" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12">
+              <form id="formEditarProducto">
+                <div class="row mb-2">
+                  <div class="form-group col-md-6">
+                    <label for="">Nombre</label>
+                    <input type="text" class="form-control" placeholder="vestido" id="inputEditarNombre">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="">Precio</label>
+                    <input type="text" class="form-control" placeholder="71.99" id="inputEditarPrecio">
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="form-group col-md-6">
+                    <label for="">Imagen</label>
+                    <input type="text" class="form-control" placeholder="https://..." id="inputEditarImagen">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="">Stock</label>
+                    <input type="number" class="form-control" id="inputEditarStock">
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="form-group col-md-6">
+                    <label for="">Categoría</label>
+                    <select name="" id="selectEditarCategoria" class="form-control">
+                    </select>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="form-group col-md-12 d-flex justify-content-end">
+                    <button class="btn btn-dark" id="btnEditar">Guardar</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" style="font-size: 1.5rem;"><strong>PRODUCTOS</strong></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <div class="btn-group me-2 mb-2 mb-sm-0" role="group" aria-label="Basic radio toggle button group">
+          <input type="radio" class="btn-check" name="btnradio" id="radioCards" autocomplete="off">
+          <label class="btn btn-outline-light" for="radioCards">
+            <i class="fas fa-table"></i>
+          </label>
+          <input type="radio" class="btn-check" name="btnradio" id="radioTabla" autocomplete="off" checked>
+          <label class="btn btn-outline-light" for="radioTabla">
+            <i class="fas fa-list"></i>
+          </label>
+        </div>
+        <form class="d-flex" id="formBusqueda">
+          <input class="form-control me-2" id="inputBusqueda" type="search" placeholder="Buscar producto" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <section class="row" id="productosContainer">
+    </section>
+
+  </main>
+
+  <button class="btn btn-outline-dark btnFlotante" id="btnCrearProducto">
+    <i class="fas fa-plus-circle fa-2x"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.1/uuid.min.js"></script>
+  <script src="./productos.js" type="module"></script>
+
+</body>
+
+</html>
